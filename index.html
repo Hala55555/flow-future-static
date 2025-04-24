@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow & Future</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        :root {
+            --green: #4CAF50;
+            --blue: #2196F3;
+            --gray-light: #f5f5f5;
+            --gray-dark: #333;
+            --white: #fff;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--gray-dark); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2rem; background: var(--white);
+            box-shadow: 0 2px 4px var(--shadow);
+            position: sticky; top: 0; z-index: 100;
+        }
+        nav .logo { font-size: 1.5rem; font-weight: 900; }
+        nav .menu a { margin-left: 1.5rem; font-weight: 500; }
+        nav .menu a:hover { color: var(--blue); }
+
+        .hero {
+            min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+            text-align: center; padding: 2rem;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; font-weight: 900; }
+        .hero p { max-width: 600px; margin-bottom: 2rem; font-size: 1.125rem; }
+        .btn { padding: 0.75rem 1.5rem; background: var(--blue); color: var(--white); border: none; border-radius: 0.5rem; cursor: pointer; font-weight: 700; }
+        .btn:hover { opacity: 0.9; }
+
+        section { padding: 4rem 2rem; }
+        h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; font-weight: 700; }
+
+        .services, .values { background: var(--gray-light); }
+        .grid { display: grid; gap: 2rem; }
+        .services .grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+        .card { background: var(--white); padding: 1.5rem; border-radius: 0.75rem; box-shadow: 0 2px 8px var(--shadow); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
+
+        .values ul { list-style: disc inside; max-width: 400px; margin: 0 auto; font-size: 1.125rem; }
+        .values li { margin-bottom: 0.75rem; }
+
+        .culture { display: flex; flex-direction: column; align-items: center; }
+        .culture .text { max-width: 500px; margin-bottom: 2rem; }
+        .culture img { border-radius: 0.75rem; box-shadow: 0 2px 8px var(--shadow); }
+
+        .cta { background: var(--blue); color: var(--white); text-align: center; }
+        .cta h2 { color: var(--white); }
+        .cta p { margin-bottom: 1.5rem; }
+
+        footer { background: var(--gray-dark); color: var(--gray-light); text-align: center; padding: 1rem; font-size: 0.875rem; }
+
+        @media(min-width: 768px) {
+            .culture { flex-direction: row; gap: 2rem; }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">Flow &amp; Future</div>
+    <div class="menu">
+        <a href="#services">Leistungen</a>
+        <a href="#values">Werte</a>
+        <a href="#culture">Arbeitswelt</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Nachhaltig. Digital. Zukunft.</h1>
+    <p>Mit cleveren Ideen und modernster Technologie gestalten wir eine bessere Welt für Unternehmen, Menschen und Umwelt.</p>
+    <button class="btn" onclick="location.href='#services'">Jetzt mehr erfahren</button>
+</section>
+
+<section id="services" class="services">
+    <h2>Unsere Leistungen</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Cloud-Lösungen</h3>
+            <p>Sichere, flexible Nutzung von Daten und Programmen via Internet.</p>
+        </div>
+        <div class="card">
+            <h3>KI-Analysen</h3>
+            <p>Datengetriebene Insights für bessere Entscheidungen.</p>
+        </div>
+        <div class="card">
+            <h3>Nachhaltige Software</h3>
+            <p>Umweltfreundliche, performante Anwendungen.</p>
+        </div>
+    </div>
+</section>
+
+<section id="values" class="values">
+    <h2>Unsere Werte</h2>
+    <ul>
+        <li>Menschlichkeit</li>
+        <li>Kreativität</li>
+        <li>Flexibilität</li>
+        <li>Transparenz</li>
+    </ul>
+</section>
+
+<section id="culture" class="culture">
+    <img src="https://source.unsplash.com/collection/office/800x600" alt="Modernes Büro">
+    <div class="text">
+        <h2>Arbeitswelt bei uns</h2>
+        <p>Helle Büros, Rückzugsorte und Pflanzen für mehr Wohlbefinden.</p>
+        <p>Flexible Arbeitszeiten &amp; Homeoffice für ausgeglichene Work-Life-Balance.</p>
+        <p>Angebote für Gesundheit und persönliche Entfaltung.</p>
+    </div>
+</section>
+
+<section id="contact" class="cta">a
+    <h2>Bereit für die Zukunft?</h2>
+    <p>Werde Teil von Flow &amp; Future und gestalte mit uns eine nachhaltige, digitale Zukunft.</p>
+    <button class="btn" onclick="location.href='mailto:jobs@flow-future.de'">Jetzt bewerben</button>
+</section>
+
+<footer>
+    &copy; 2025 Flow &amp; Future. Alle Rechte vorbehalten.
+</footer>
+</body>
+</html>
